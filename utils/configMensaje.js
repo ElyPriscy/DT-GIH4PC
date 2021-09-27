@@ -7,8 +7,8 @@ const sendMails = (mails,content) => {
         secure: false,
       //  service: 'gmail',
         auth: {
-            user: 'appdisups@gmail.com', // Cambiar x email
-            pass: '97KVOesvQziS' // Cambiar x tu password
+            user: 'trans.dig.gih4pc@gmail.com', // Cambiar x email
+            pass: 'gih4pcUps21E' // Cambiar x tu password
         }
     }); 
 
@@ -19,7 +19,10 @@ const sendMails = (mails,content) => {
         from: 'Remitente',
         to: mails, 
         subject: 'Notificacion de un nuevo test',
-        html: `<strong>${content}</strong> <br/>`
+        html: `<strong>${content}</strong> <br/>
+        
+        <strong> Link del nuevo test:</strong> <br/>
+        ${url_front}+'/'+${cuestionario._id}`
 //         html: `
 //  <strong>Nombre:</strong> ${formulario.nombre} <br/>
 //  <strong>E-mail:</strong> ${formulario.email} <br/>
